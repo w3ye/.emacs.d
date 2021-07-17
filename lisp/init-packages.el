@@ -73,5 +73,6 @@
   :config (counsel-projectile-mode))
 
 (use-package magit)
+(use-package forge)
 
 (provide 'init-packages)

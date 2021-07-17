@@ -19,3 +19,4 @@ projectile-bookmarks.eld
 projectile.cache
 transient/
 server/
+forge-database.sqlite

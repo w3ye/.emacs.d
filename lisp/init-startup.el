@@ -11,5 +11,6 @@
 ;; Show line numbers
 (setq display-line-numbers-type 'absolute)
 (global-display-line-numbers-mode t)
-
+;; Authentication for github - magit forge
+(setq auth-sources '("~/.authinfo"))
 (provide 'init-startup)
