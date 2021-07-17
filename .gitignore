@@ -1,0 +1,14 @@
+#.gitignore#
+.gitignore~
+auto-save-list/
+custom.el~
+elpa/
+init.el~
+lisp/#init-startup.el#
+lisp/#init-ui.el#
+lisp/.#init-ui.el
+lisp/init-elpa.el~
+lisp/init-packages.el~
+lisp/init-startup.
+lisp/init-ui.el~
+recentf
