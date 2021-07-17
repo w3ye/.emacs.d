@@ -11,4 +11,5 @@ lisp/init-elpa.el~
 lisp/init-packages.el~
 lisp/init-startup.
 lisp/init-ui.el~
+list/init-startup.el~
 recentf
