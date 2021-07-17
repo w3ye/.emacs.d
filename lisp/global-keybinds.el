@@ -1,3 +1,5 @@
+;; Getting rid of the startup warning
+(setq evil-want-keybinding nil)
 ;; keymapping plugin
 (use-package general)
 
