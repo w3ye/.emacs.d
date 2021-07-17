@@ -62,4 +62,14 @@
   ([remap describe-variable] . counsel-describe-variable)
   ([remap describe-key] . helpful-key))
 
+(use-package projectile
+  :diminish projectile-mode
+  :config (projectile-mode)
+  :custom ((projectile-completion-system 'ivy))
+  :bind-keymap
+  ("C-c p" . projectile-command-map))
+;; More options for projectile
+(use-package counsel-projectile
+  :config (counsel-projectile-mode))
+
 (provide 'init-packages)
