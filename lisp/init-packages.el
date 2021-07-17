@@ -73,6 +73,7 @@
   :config (counsel-projectile-mode))
 
 (use-package magit)
+;; NOTE: Make sure to configure the Github token before using - Magit Forge
 (use-package forge)
 
 (provide 'init-packages)
