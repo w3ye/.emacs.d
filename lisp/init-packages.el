@@ -72,4 +72,6 @@
 (use-package counsel-projectile
   :config (counsel-projectile-mode))
 
+(use-package magit)
+
 (provide 'init-packages)

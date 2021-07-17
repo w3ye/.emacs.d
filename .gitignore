@@ -14,3 +14,7 @@ lisp/init-startup.
 lisp/init-ui.el~
 lisp/init-startup.el~
 recentf
+eshell
+projectile-bookmarks.eld
+projectile.cache
+transient/
