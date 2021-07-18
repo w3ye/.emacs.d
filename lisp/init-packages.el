@@ -1,3 +1,6 @@
+;;; init-packages.el --- Installing packages
+;;; Commentary:
+;;; Code:
 (use-package restart-emacs)
 
 ;; Install ivy, swiper and counsel
@@ -95,5 +98,9 @@
 	company-begin-commands '(self-insert-command))
   (push '(company-semantic :with company-yasnippet) company-backends)
   :hook ((after-init . global-company-mode)))
+;; Install flycheck (syntax check)
+(use-package flycheck
+  :hook (prog-mode . flycheck-mode))
 
 (provide 'init-packages)
+;;; init-packages.el ends here
