@@ -7,6 +7,7 @@
 (require 'init-packages)
 (require 'init-ui)
 (require 'global-keybinds)
+(require 'lsp)
 
 ;; If custom.el exists, load custom.el
 (when (file-exists-p custom-file)
