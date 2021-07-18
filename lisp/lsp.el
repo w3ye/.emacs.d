@@ -6,7 +6,6 @@
   ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
   (setq lsp-keymap-prefix "C-c l")
   :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
-	 (python-mode . lsp-deferred)
          (html-mode . lsp-deferred)
 	 (css-mode . lsp-deferred)
 	 (javascript-mode . lsp-deferred)
