@@ -1,3 +1,6 @@
+;;; init-startup.el --- init startup
+;;; Commentary:
+;;; Code:
 ;; No bells
 (setq ring-bell-function #'ignore
       visible-bell nil)
@@ -14,3 +17,4 @@
 ;; Authentication for github - magit forge
 (setq auth-sources '("~/.authinfo"))
 (provide 'init-startup)
+;;; init-startup.el ends here
