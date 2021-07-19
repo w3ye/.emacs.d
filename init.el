@@ -9,7 +9,9 @@
 (require 'init-elpa)
 (require 'init-packages)
 (require 'init-ui)
+(require 'ligature-config)
 (require 'global-keybinds)
+(require 'lang-settings)
 (require 'lsp)
 (require 'org-mode)
 
