@@ -20,3 +20,5 @@ projectile.cache
 transient/
 server/
 forge-database.sqlite
+.cache/
+.lsp-session-v1

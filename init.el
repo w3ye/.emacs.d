@@ -11,6 +11,7 @@
 (require 'init-ui)
 (require 'global-keybinds)
 (require 'lsp)
+(require 'org-mode)
 
 ;; If custom.el exists, load custom.el
 (when (file-exists-p custom-file)

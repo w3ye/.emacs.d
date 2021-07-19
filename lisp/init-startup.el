@@ -6,9 +6,11 @@
       visible-bell nil)
 ;; Disable startup screen
 (setq inhibit-startup-screen t)
+(set-frame-font "FiraCode NF 13" nil t)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
+(set-fringe-mode 10)
 (global-visual-line-mode 1)
 ;; Garbage collection
 (setq gc-cons-threshold most-positive-fixnum)
