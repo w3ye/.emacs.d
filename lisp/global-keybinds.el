@@ -1,3 +1,6 @@
+;;; global-keybinds.el --- sets global keybinds for emacs
+;;; Commentary:
+;;; Code:
 ;; Getting rid of the startup warning
 (setq evil-want-keybinding nil)
 ;; keymapping plugin
@@ -27,4 +30,8 @@
 (general-define-key
  "C-M-j" 'counsel-switch-buffer)
 
+(use-package evil-nerd-commenter
+  :bind ("C-/" . evilnc-comment-or-uncomment-lines))
+
 (provide 'global-keybinds)
+;;; global-keybinds.el ends here

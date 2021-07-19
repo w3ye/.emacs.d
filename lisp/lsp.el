@@ -19,6 +19,8 @@
   :config
   (lsp-enable-which-key-integration t))
 
+(use-package lsp-ivy)
+
 ;; Enhance lsp ui
 (use-package lsp-ui
   :hook (lsp-mode . lsp-ui-mode)
