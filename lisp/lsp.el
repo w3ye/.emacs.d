@@ -1,17 +1,42 @@
 ;;; lsp.el --- init lsp
 ;;; Commentary:
 ;;; Code:
+(defun ye/lsp-mode-setup ()
+  (setq lsp-headerline-breadcrumb-segments '(path-up-to-project file symbols))
+  (lsp-headerline-breadcrumb-mode))
+
 (use-package lsp-mode
+  :commands (lsp lsp-deferred)
   :init
-  ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
   (setq lsp-keymap-prefix "C-c l")
-  :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
-         (html-mode . lsp-deferred)
-	 (css-mode . lsp-deferred)
-	 (javascript-mode . lsp-deferred)
-	 (typescript-mode . lsp-deferred)
-         ;; if you want which-key integration
-         (lsp-mode . lsp-enable-which-key-integration))
-  :commands lsp lsp-deferred)
+  :hook
+  ((js-mode . lsp-deferred)
+   (html-mode . lsp-deferred)
+   (css-mode . lsp-deferred)
+   (python-mode . lsp-deferred)
+   (ruby-mode . lsp-deferred)
+   (lsp-mode . ye/lsp-mode-setup))
+  :config
+  (lsp-enable-which-key-integration t))
+
+;; Enhance lsp ui
+(use-package lsp-ui
+  :hook (lsp-mode . lsp-ui-mode)
+  :custom
+  (lsp-ui-doc-position 'bottom))
+
+(use-package lsp-treemacs
+  :after lsp)
+
+(use-package typescript-mode
+  :mode "\\.ts\\'"
+  :hook (typescript-mode . lsp-deferred)
+  :config
+  (setq typescript-indent-level 2))
+
+(use-package emmet-mode
+  :hook ((sgml-mode . emmet-mode)
+	 (css-mode . emmet-mode)))
+
 (provide 'lsp)
 ;;; lsp.el ends here
