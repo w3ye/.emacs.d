@@ -73,31 +73,27 @@
   ("C-c p" . projectile-command-map))
 ;; More options for projectile
 (use-package counsel-projectile
-  :config (counsel-projectile-mode))
+   :config (counsel-projectile-mode))
 
 (use-package magit)
 ;; NOTE: Make sure to configure the Github token before using - Magit Forge
 (use-package forge)
 
-;; Install company (auto-complete)
+;; Install company(auto-complete)
 (use-package company
-  :config
-  (setq company-dabbrev-code-everywhere t
-	company-dabbrev-code-modes t
-	company-dabbrev-code-other-buffers 'all
-	company-dabbrev-downcase nil
-	company-dabbrev-ignore-case t
-	company-dabbrev-other-buffers 'all
-	company-require-match nil
-	company-minimum-prefix-length 2
-	company-show-numbers t
-	company-tooltip-limit 20
-	company-idle-delay 0
-	company-echo-delay 0
-	company-tooltip-offset-display 'scrollbar
-	company-begin-commands '(self-insert-command))
-  (push '(company-semantic :with company-yasnippet) company-backends)
-  :hook ((after-init . global-company-mode)))
+  :after lsp-mode
+  :hook ((emacs-lisp-mode . company-mode)
+	 (lisp-mode . company-mode))
+  :bind (:map company-active-map
+         ("<tab>" . company-complete-selection))
+        (:map lsp-mode-map
+         ("<tab>" . company-indent-or-complete-common))
+  :custom
+  (company-minimum-prefix-length 1)
+  (company-idle-delay 0.0))
+(use-package company-box
+  :hook (company-mode . company-box-mode))
+
 ;; Install flycheck (syntax check)
 (use-package flycheck
   :hook (prog-mode . flycheck-mode))
