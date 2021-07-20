@@ -12,6 +12,8 @@
 (scroll-bar-mode -1)
 (set-fringe-mode 10)
 (global-visual-line-mode 1)
+;; Saves auto saves file to ~/.saves
+(setq backup-directory-alist `(("." . "~/.saves")))
 ;; Garbage collection
 (setq gc-cons-threshold most-positive-fixnum)
 ;; Show line numbers
