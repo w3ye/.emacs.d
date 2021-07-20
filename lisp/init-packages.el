@@ -98,5 +98,8 @@
 (use-package flycheck
   :hook (prog-mode . flycheck-mode))
 
+(use-package emojify
+  :hook (after-init . global-emojify-mode))
+
 (provide 'init-packages)
 ;;; init-packages.el ends here

@@ -12,5 +12,6 @@
   :ensure t
   :init (doom-modeline-mode 1)
   :custom ((doom-modeline-height 14)))
+
 (provide 'init-ui)
 ;;; init-ui.el ends here
