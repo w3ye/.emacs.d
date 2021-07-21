@@ -4,9 +4,11 @@
 ;; Install all-the-icons so doom-modeline will work
 (use-package all-the-icons)
 
-(use-package doom-themes
+(use-package gruvbox-theme
   :init
-  (load-theme 'doom-palenight t))
+  (load-theme 'gruvbox-dark-soft t))
+
+(use-package doom-themes)
 
 (use-package doom-modeline
   :ensure t

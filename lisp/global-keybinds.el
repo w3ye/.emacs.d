@@ -27,11 +27,21 @@
   :config
   (evil-collection-init))
 
+(use-package evil-surround
+  :ensure t
+  :config
+  (global-evil-surround-mode 1))
 (general-define-key
  "C-M-j" 'counsel-switch-buffer)
 
 (use-package evil-nerd-commenter
   :bind ("C-/" . evilnc-comment-or-uncomment-lines))
+
+;; yasnippet keybinds, since autocomplete uses <tab>
+;; yasnippet now use C-return to use snippet
+(define-key yas-minor-mode-map (kbd "<tab>") nil)
+(define-key yas-minor-mode-map (kbd "TAB") nil)
+(define-key yas-minor-mode-map (kbd "<C-return>") 'yas-expand)
 
 (provide 'global-keybinds)
 ;;; global-keybinds.el ends here
