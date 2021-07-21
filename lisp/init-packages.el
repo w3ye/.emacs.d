@@ -75,7 +75,9 @@
 (use-package counsel-projectile
    :config (counsel-projectile-mode))
 
-(use-package magit)
+(use-package magit
+  :custom
+  (magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1))
 ;; NOTE: Make sure to configure the Github token before using - Magit Forge
 (use-package forge)
 
@@ -101,5 +103,12 @@
 (use-package emojify
   :hook (after-init . global-emojify-mode))
 
+(use-package yasnippet
+  :init (add-hook 'prog-mode-hook #'yas-minor-mode)
+  :config
+  (yas-reload-all))
+(yas-global-mode 1)
+(use-package yasnippet-snippets
+  :after yasnippet)
 (provide 'init-packages)
 ;;; init-packages.el ends here
