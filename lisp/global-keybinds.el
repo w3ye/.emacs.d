@@ -43,5 +43,7 @@
 (define-key yas-minor-mode-map (kbd "TAB") nil)
 (define-key yas-minor-mode-map (kbd "<C-return>") 'yas-expand)
 
+(define-key evil-normal-state-map (kbd "g t") 'centaur-tabs-forward)
+(define-key evil-normal-state-map (kbd "g T") 'centaur-tabs-backward)
 (provide 'global-keybinds)
 ;;; global-keybinds.el ends here

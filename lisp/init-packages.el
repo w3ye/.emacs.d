@@ -90,9 +90,12 @@
          ("<tab>" . company-complete-selection))
         (:map lsp-mode-map
          ("<tab>" . company-indent-or-complete-common))
+	(("C-c s s" . company-yasnippet))
   :custom
   (company-minimum-prefix-length 1)
-  (company-idle-delay 0.0))
+  (company-idle-delay 0.0)
+  :config
+  (setq company-backends '(company-yasnippet)))
 (use-package company-box
   :hook (company-mode . company-box-mode))
 
