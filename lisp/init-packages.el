@@ -23,6 +23,8 @@
   :after (ivy)
   :hook (after-init . ivy-mode)
   :bind (("C-s" . swiper)))
+;; Works with counsel (counsel-mx enhancement)
+(use-package smex)
 (use-package counsel
   :after (ivy)
   :bind (("M-x" . counsel-M-x)
@@ -113,5 +115,22 @@
 (yas-global-mode 1)
 (use-package yasnippet-snippets
   :after yasnippet)
+(use-package origami
+  :hook (prog-mode . origami-mode))
+
+(use-package impatient-mode)
+(use-package simple-httpd
+  :config
+  (setq httpd-port 5500))
+(use-package htmlize)
+
+(use-package markdown-mode
+   :ensure t
+   :commands (markdown-mode gfm-mode)
+   :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode))
+   :init (setq markdown-command "multimarkdown"))
+
 (provide 'init-packages)
 ;;; init-packages.el ends here

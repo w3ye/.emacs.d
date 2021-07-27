@@ -17,7 +17,9 @@
    (ruby-mode . lsp-deferred)
    (lsp-mode . ye/lsp-mode-setup))
   :config
-  (lsp-enable-which-key-integration t))
+  (lsp-enable-which-key-integration t)
+  :custom
+  (setq lsp-enable-snippet t))
 
 (use-package lsp-ivy)
 
@@ -28,8 +30,9 @@
   (lsp-ui-doc-position 'bottom))
 
 (use-package lsp-treemacs
-  :after lsp)
-
+  :after lsp
+  :bind (:map evil-normal-state-map
+	      ("C-x m" . treemacs)))
 (use-package typescript-mode
   :mode "\\.ts\\'"
   :hook (typescript-mode . lsp-deferred)

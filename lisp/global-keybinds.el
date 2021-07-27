@@ -42,7 +42,7 @@
 (define-key yas-minor-mode-map (kbd "<tab>") nil)
 (define-key yas-minor-mode-map (kbd "TAB") nil)
 (define-key yas-minor-mode-map (kbd "<C-return>") 'yas-expand)
-
+(define-key yas-minor-mode-map (kbd "M-q") 'yas-next-field)
 (define-key evil-normal-state-map (kbd "g t") 'centaur-tabs-forward)
 (define-key evil-normal-state-map (kbd "g T") 'centaur-tabs-backward)
 (provide 'global-keybinds)
