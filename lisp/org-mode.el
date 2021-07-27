@@ -12,6 +12,12 @@
   :config
   (setq org-ellipsis " "
 	org-hide-emphasis-markers t)
+  (setq org-agenda-files '("~/.emacs.d/my-tasks/task.org"))
+  (setq org-agenda-start-with-log-mode t
+	org-log-done 'time
+	org-log-into-drawer t)
+  (setq org-todo-keywords
+    '((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d!)")))
   (efs/org-font-setup))
 
 (use-package org-bullets
