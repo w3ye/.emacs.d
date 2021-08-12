@@ -41,7 +41,8 @@
 
 (use-package emmet-mode
   :hook ((sgml-mode . emmet-mode)
-	 (css-mode . emmet-mode)))
+	 (css-mode . emmet-mode)
+	 (web-mode . emmet-mode)))
 
 (provide 'lsp)
 ;;; lsp.el ends here

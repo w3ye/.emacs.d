@@ -1,6 +1,10 @@
 ;;; init-startup.el --- init startup
 ;;; Commentary:
 ;;; Code:
+
+;; TEMPORARY DEFAULT PATH
+(setq default-directory "~/lighthouselabs")
+
 ;; No bells
 (setq ring-bell-function #'ignore
       visible-bell nil)

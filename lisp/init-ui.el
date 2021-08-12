@@ -25,9 +25,9 @@
   :config
   (centaur-tabs-mode t)
   (setq centaur-tabs-height 38
-	centaur-tabs-style "rounded"
+	centaur-tabs-style "wave"
 	centaur-tabs-set-icons t
-	centaur-tabs-set-bar 'over
+	centaur-tabs-set-bar 'left
 	centaur-tabs-set-modified-marker t
 	centaur-tabs-cycle-scope 'tabs))
 (use-package xterm-color)

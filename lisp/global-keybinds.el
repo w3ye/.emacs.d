@@ -21,7 +21,11 @@
   (define-key evil-insert-state-map (kbd "C-g") 'evil-normal-state)
   ;; Move the cursor to the warped line instead of jumping to the next line
   (evil-global-set-key 'motion "j" 'evil-next-visual-line)
-  (evil-global-set-key 'motion "k" 'evil-previous-visual-line))
+  (evil-global-set-key 'motion "k" 'evil-previous-visual-line)
+
+  (evil-set-initial-state 'term-mode 'emacs)
+  (evil-set-initial-state 'compilation-mode 'emacs))
+
 (use-package evil-collection
   :after evil
   :config

@@ -7,8 +7,11 @@
   (variable-pitch-mode 1)
   (visual-line-mode 1))
 
+(add-hook 'org-mode-hook 'visual-line-mode 1)
+(add-hook 'org-mode-hook 'visual-fill-column-mode 1)
 (use-package org
-  :hook (org-mode . efs/org-mode-setup)
+  :hook
+  (org-mode . efs/org-mode-setup)
   :config
   (setq org-ellipsis " "
 	org-hide-emphasis-markers t)

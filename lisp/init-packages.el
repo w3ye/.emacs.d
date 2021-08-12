@@ -131,6 +131,8 @@
          ("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode))
    :init (setq markdown-command "multimarkdown"))
+(use-package web-mode)
+(use-package format-all)
 
 (provide 'init-packages)
 ;;; init-packages.el ends here
