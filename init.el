@@ -15,6 +15,10 @@
 (require 'lsp)
 (require 'org-mode)
 
+;; for markdown preview, checkout https://github.com/shime/emacs-livedown for configs
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/emacs-livedown"))
+(require 'livedown)
+
 ;; If custom.el exists, load custom.el
 (when (file-exists-p custom-file)
   (load-file custom-file))
